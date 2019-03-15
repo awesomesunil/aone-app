@@ -10,13 +10,12 @@ export default class PDFViewer extends React.Component {
     componentDidMount() {
         const { src } = this.props;
         const element = this.viewerRef.current;
-
         this.backend.init(src, element);
     }
 
     render() {
         return (
-            <div ref={this.viewerRef} id='viewer' style={{ width: '100%', height: '100%' }}>
+            <div ref={this.viewerRef} id='viewer' style={{ width: '100%', height: '1000vh' }}>
             </div>
         )
     }
