@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
-import Navigation from './components/navigation/Navigation'
-
-import logo from './logo.svg';
 import './App.css';
+import PDFViewer from './components/PDFViewer/PDFViewer';
+import PDFJSBackend from './backends/pdfjs';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Navigation />
+        <PDFViewer
+          backend={PDFJSBackend}
+          src='/myPDF.pdf'
+        />
       </div>
     );
   }
